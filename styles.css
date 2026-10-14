@@ -101,3 +101,10 @@
 /* Preserve complete diagrams and legends in the second Home card row. */
 .home-cards .card-photo.complete-graphic{background:#fff}
 .home-cards .card-photo.complete-graphic img{object-fit:contain}
+
+/* Align paired sections in the carbon-outlook resource area. */
+@media(min-width:768px){
+  .outlook-resources{row-gap:0}
+  .outlook-resources>.res-block{min-width:0;margin:0;padding:0 0 20px;border-top:0}
+  .outlook-resources>.res-block:nth-child(n+3){border-top:3px solid var(--rule);padding-top:22px}
+}
