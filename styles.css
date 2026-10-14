@@ -108,3 +108,47 @@
   .outlook-resources>.res-block{min-width:0;margin:0;padding:0 0 20px;border-top:0}
   .outlook-resources>.res-block:nth-child(n+3){border-top:3px solid var(--rule);padding-top:22px}
 }
+
+/* Home: three cards share the existing forecast area width. */
+.home .forecast-trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.home .forecast-trio>.card{min-width:0}
+.home .forecast-trio .card-content{padding:26px 24px}
+.home .forecast-trio h3{font-size:28px;line-height:1.15}
+.home .forecast-trio .forecast-summary{font-size:17px}
+.home .forecast-trio .forecast-label{font-size:14px;gap:10px}
+.home .forecast-trio .forecast-actions{gap:16px}
+.home .forecast-trio .btn{font-size:15px}
+.home .forecast-trio .forecast-cycles{gap:8px}
+.home .forecast-trio .forecast-cycles strong{font-size:15px}
+.forecast-status.evaluated{background:#edf4f8;color:#245a77;border:1px solid #c9dce8}
+.forecast-evaluation{border-top:4px solid var(--ocean)}
+.forecast-evaluation .card-content{padding-top:22px!important}
+.evaluation-card-topics{display:grid;gap:20px;margin:24px 0 0}
+.evaluation-card-topics>div{border-left:2px solid #b9d4e4;padding-left:13px}
+.evaluation-card-topics strong{display:block;font-size:16px;font-weight:500;margin-bottom:5px;color:#18364b}
+.evaluation-card-topics span{display:block;font-size:15px;line-height:1.35;color:#52616b}
+.evaluation-page .splash{height:333px;min-height:333px;max-height:333px}
+.evaluation-content>.lead{max-width:950px}
+.evaluation-section{padding:24px 0 36px}
+.evaluation-section+.evaluation-section{border-top:2px solid var(--rule);padding-top:38px}
+.evaluation-section>.section-eyebrow{font-size:14px;margin:0 0 10px}
+.evaluation-section h2{max-width:980px;padding-bottom:0;margin:0 0 20px}
+.evaluation-section>p:not(.section-eyebrow){max-width:1000px;line-height:1.4}
+.evaluation-section .paper-figure{margin-bottom:26px}
+.evaluation-findings{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:26px 0 22px}
+.evaluation-findings>div{border-left:3px solid #b9d4e4;padding-left:18px}
+.evaluation-findings h3{font-size:22px;font-weight:400;margin:0 0 12px}
+.evaluation-findings p{font-size:18px;color:#444;line-height:1.4;margin:0}
+.evaluation-resources{border-top:2px solid var(--rule);padding-top:28px;display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.evaluation-resources>a:last-child{font-size:16px;color:var(--ocean)}
+@media(min-width:768px) and (max-width:1199px){
+  .home .forecast-trio{gap:20px}
+  .home .forecast-trio .card-content{padding:24px 18px}
+  .home .forecast-trio h3{font-size:25px}
+  .home .forecast-trio .forecast-cycles{grid-template-columns:1fr;gap:10px}
+  .home .forecast-trio .forecast-cycles:before{display:none}
+  .home .forecast-trio .forecast-cycles li{display:grid;grid-template-columns:31px 1fr 1fr;align-items:center;gap:9px}
+  .home .forecast-trio .cycle-dot,.home .forecast-trio .forecast-cycles strong{margin:0}
+  .home .forecast-trio .forecast-label{gap:7px;font-size:13px}
+}
+@media(max-width:767px){.home .forecast-trio,.evaluation-findings{grid-template-columns:1fr}.evaluation-page .branding{display:none}}
